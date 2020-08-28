@@ -25,7 +25,7 @@ func main() {
 	}
 
 	http.HandleFunc("/", pageIndex)
-	http.HandleFunc("/api/server/", api.Server)
+	http.HandleFunc("/api/", api.API())
 
 	log.Fatal(http.ListenAndServe(":8080", nil))
 
